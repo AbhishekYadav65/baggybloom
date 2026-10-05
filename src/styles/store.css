@@ -1,0 +1,195 @@
+/* BaggyBloom — store page */
+#store {
+  position: relative;
+  z-index: 41;
+  background: var(--ivory);
+  padding: 110px clamp(16px, 4vw, 48px) 90px;
+}
+#cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.chip {
+  border: 1.5px solid var(--ink);
+  border-radius: 40px;
+  padding: 9px 18px;
+  font: 500 13px/1 var(--sans);
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+.chip span {
+  opacity: 0.6;
+  margin-left: 4px;
+}
+.chip.on {
+  background: var(--ink);
+  color: var(--ivory);
+}
+.stools {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+  align-items: center;
+}
+.stools input,
+.stools select {
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 40px;
+  padding: 12px 20px;
+  font: 400 14px var(--sans);
+  min-width: 220px;
+}
+#ftog {
+  display: none;
+  border: 1.5px solid var(--ink);
+  border-radius: 40px;
+  padding: 12px 22px;
+  font: 500 13px var(--sans);
+}
+.swrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+}
+#fp {
+  position: sticky;
+  top: 90px;
+}
+#fp fieldset {
+  border: 0;
+  border-top: 1.5px solid var(--ink);
+  margin: 0 0 22px;
+  padding: 14px 0 0;
+}
+#fp legend {
+  font: italic 400 22px var(--serif);
+  padding-right: 10px;
+}
+.sws {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sw {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--ivory);
+  box-shadow: 0 0 0 1.5px rgba(58, 42, 36, 0.4);
+}
+.sw.on {
+  box-shadow: 0 0 0 2.5px var(--ink);
+}
+#fp label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 6px 0;
+  font-size: 14px;
+}
+#fp label span {
+  opacity: 0.55;
+  margin-left: auto;
+}
+#fp input[type="checkbox"] {
+  accent-color: var(--ink);
+  width: 16px;
+  height: 16px;
+}
+#fp input[type="number"] {
+  width: 46%;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  border-radius: 12px;
+  padding: 8px;
+}
+.lnk2 {
+  font: italic 500 18px var(--cor);
+  text-decoration: underline;
+}
+#sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 36px 22px;
+}
+.sc[hidden],
+#empty[hidden] {
+  display: none;
+}
+.sc .stage {
+  position: relative;
+  filter: drop-shadow(0 12px 10px rgba(110, 60, 50, 0.2));
+}
+.sc .ph {
+  aspect-ratio: 4/5;
+  border-radius: 22px;
+}
+.sc figcaption {
+  padding-top: 12px;
+}
+.sc h3 {
+  margin: 0;
+  font: italic 400 22px/1.1 var(--serif);
+}
+.sc figcaption span {
+  display: block;
+}
+.qa {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ivory);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 10px rgba(80, 50, 40, 0.25);
+}
+#empty {
+  padding: 50px 0;
+  font: italic 400 28px var(--serif);
+}
+body.fine input {
+  cursor: text;
+}
+body.fine select {
+  cursor: pointer;
+}
+body[data-c="text"] #pearl,
+body[data-c="text"] #ring {
+  opacity: 0;
+}
+@media (max-width: 860px) {
+  .swrap {
+    display: block;
+  }
+  #fp {
+    display: none;
+    position: static;
+    margin-bottom: 24px;
+  }
+  #fp.open {
+    display: block;
+  }
+  #ftog {
+    display: inline-block;
+  }
+  #sgrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 14px;
+  }
+  .stools input,
+  .stools select {
+    min-width: 0;
+    flex: 1;
+  }
+}

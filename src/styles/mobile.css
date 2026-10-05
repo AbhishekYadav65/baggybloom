@@ -1,0 +1,36 @@
+/* Mobile-first sizing: nothing may overwhelm a phone screen (loaded last). */
+img { max-width: 100%; }
+@media (max-width: 860px) {
+  #hero { padding: 112px 18px 40px; min-height: auto; }
+  #hero h1 { font-size: clamp(44px, 13vw, 72px); }
+  #hero .depth { height: min(54svh, 440px); }
+  .dl.sub { width: min(52vw, 240px); }
+  .blob, .ringo, .paper { scale: 0.6; }
+  .head { margin-bottom: 24px; }
+  .door { width: clamp(150px, 44vw, 230px); }
+  .door .fr { aspect-ratio: 3 / 4; }
+  #strip { padding: 20px 28vw 30px; }
+  .grid { row-gap: 34px; }
+  .r0 .ph { aspect-ratio: 1 / 1; }
+  .r3 .ph { aspect-ratio: 3 / 2; }
+  .r1 .ph, .r4 .ph { aspect-ratio: 4 / 5; }
+  .r2 .ph, .r5 .ph { aspect-ratio: 1; }
+  .grid > .r0, .grid > .r3 { max-width: 92%; margin-inline: auto; }
+  .cap { width: 84%; padding: 10px 12px; }
+  .cap h3 { font-size: 20px; }
+  .r3:before { font-size: 26vw; }
+  .hnote { display: none; }
+  #story { padding: 70px 18px; }
+  #story .pic { max-width: 420px; margin: 0 auto 40px; }
+  #story .ph { aspect-ratio: 1 / 1.1; max-height: 58svh; }
+  .pwrap { padding-top: 78px; }
+  .pimg .ph { aspect-ratio: 1; max-height: 54svh; }
+  .th button { width: 54px; height: 54px; }
+  .pbg { font-size: 38vw; top: 6%; }
+  #thread path { stroke-width: 2; }
+  #store { padding-top: 96px; }
+  .qa { width: 34px; height: 34px; }
+  .sc h3 { font-size: 18px; }
+  footer { padding: 80px 18px 30px; }
+  #film { height: 360svh; }
+}

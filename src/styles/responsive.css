@@ -1,0 +1,91 @@
+/* BaggyBloom — responsive + accessibility overrides (load last) */
+/* mobile / tablet */
+@media (max-width: 860px) {
+  nav .links a {
+    display: none;
+  }
+  nav .links a.st {
+    display: inline;
+  }
+  #hero {
+    display: block;
+    padding-top: 132px;
+  }
+  #hero .depth {
+    height: 62vh;
+  }
+  .dl.sub {
+    width: min(66vw, 320px);
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 14px;
+  }
+  .grid > * {
+    grid-column: auto !important;
+    margin-top: 0 !important;
+  }
+  .grid > .r0,
+  .grid > .r3,
+  .mq {
+    grid-column: 1/-1 !important;
+  }
+  .grid > .r1,
+  .grid > .r4 {
+    margin-top: 48px !important;
+  }
+  #story {
+    display: block;
+  }
+  #story .pic {
+    margin: 0 14px 50px;
+  }
+  .pwrap {
+    display: block;
+  }
+  .pimg {
+    margin: 0;
+  }
+  .pinfo {
+    margin-top: 30px;
+  }
+  #strip {
+    padding: 30px 22vw 40px;
+  }
+}
+@media (pointer: coarse) {
+  #pearl,
+  #ring,
+  #trail {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before {
+    animation: none !important;
+    transition: opacity 0.3s !important;
+  }
+  .int {
+    clip-path: none !important;
+    opacity: 0;
+  }
+  .card.in .int {
+    opacity: 1;
+  }
+  .u {
+    opacity: 1;
+    transform: none;
+  }
+  .rv {
+    opacity: 1;
+    transform: none;
+  }
+  .door .pl,
+  .door .pr {
+    display: none;
+  }
+  #thread {
+    display: none;
+  }
+}
